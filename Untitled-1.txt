@@ -1,0 +1,12 @@
+          <p>OpenClassrooms propose :</p>
+          <p>- Une date de <em>début au choix</em>,</p>
+          <p>- Un créneau 3-4 jours entreprise, 2-1 jours d'études (à définir ensemble),</p>
+          <p>- Un <em>auto-apprentissage</em> via des projets encadrés,</p>
+          <br/>
+
+          <p>WebForce3 propose:</p>
+          <p>- Une date de début fixe, après un <em>bootcamp</em> de 3mois et demi:</p>
+          <p>-- début du bootcamp: 27/02/2023, début du stage en entreprise: 16/06/2023 </p>
+          <p>- Une alternance semaines entreprise/semaine de cours,</p>
+
+          <p> Les deux pour un total d'à peu près <em>un an</em> de formation.</p>
