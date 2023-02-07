@@ -378,7 +378,7 @@ const Simulations = {
       return Layouts.messageWithButtons({
         content: `
           <h1>Alors...</h1>
-          <p>Si vous êtes intéressé, ou que vous voulez en discuter pour <a className="app-a" href="#about">en savoir plus</a>, n'hésitez pas à <a className="app-a" href="#contact">me contacter</a>, je serais ravi d'en parler avec vous!</p>
+          <p>Si vous êtes intéressé, ou que vous voulez en discuter pour <a className="app-a" href="#about">en savoir plus</a>, n'hésitez pas à <a className="app-a" href="#contact">me contacter</a>, je serais ravi d'échanger avec vous!</p>
         `,
         btn: {
           text: 'On recommence ?',
