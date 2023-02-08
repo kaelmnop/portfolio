@@ -1,10 +1,10 @@
-// Shortcuts to skip waiting for the flow
+
 const Simulations = {
     localStorageError() {
-      return false // Make this true to see the error screens
+      return false 
     },
   
-    // This one is a sub-scenario of the one above
+
     deadEndError() {
       return Simulations.localStorageError() && true
     },
@@ -15,7 +15,7 @@ const Simulations = {
     }
   }
   
-  // Used in flow decision points
+
   const Constants = {
     DELETE: 'delete a progress',
     SOMETHING: 'a thing',
@@ -25,7 +25,7 @@ const Simulations = {
       `Not a lucky day. Please refresh the page and try again.`
   }
   
-  // Helpers
+
   const Utils = {
     sleep: async (durationMilliseconds) => {
       return new Promise(resolve => {
@@ -62,7 +62,7 @@ const Simulations = {
     }
   }
   
-  // Side-effects
+
   const Actions = {
     async loadUserProgress() {
       await Utils.sleep(2000)
@@ -112,8 +112,7 @@ const Simulations = {
     }
   }
   
-  // All the ways the app can be in,
-  // named and organized freely, using Promises
+
   const Flows = {
     master: async () => {
       if (Simulations.workingOnView()) {
@@ -146,7 +145,7 @@ const Simulations = {
       return Flows.continuation()
     },
   
-    // Switch flows based on which button in Views.main is clicked.
+
     continuation: Utils.branchOff(
       () => Views.main(),
       {
@@ -178,7 +177,7 @@ const Simulations = {
     }
   }
   
-  // Some low-level components that serve as a screen's layout
+
   const Layouts = {
     init(el) {
       this.el = el
@@ -220,7 +219,6 @@ const Simulations = {
             <footer>
               ${getBtn(btn).map(eachBtn => `
                 <button
-                  autofocus
                   class="btn ${eachBtn.type || ''}"
                   data-key="${eachBtn.key || Constants.FORWARD}"
                 >
@@ -338,7 +336,7 @@ const Simulations = {
       return Layouts.messageWithButtons({
         content: `
           <h1>Parce que.</h1>
-          <p>Et plus sérieusement : comme beaucoup, j'ai commencé l'informatique en découvrant HTML & CSS ; et ça m'a toujours plu!</p>
+          <p>Et plus sérieusement : comme beaucoup, j'ai commencé l'informatique en découvrant HTML & CSS ; et ça m'a toujours plu !</p>
           <p>Aujourd'hui, après une période de réflexion, j'ai décidé de revenir aux sources.</p>
         `,
         btn: {
@@ -351,7 +349,7 @@ const Simulations = {
       return Layouts.messageWithButtons({
         content: `
           <h1>L'alternance</h1>
-          <p>Pour cela, j'ai passé les concours pour accéder à différentes formations - il ne me manque que le stage en alternance!</p>
+          <p>Pour cela, j'ai passé les concours pour accéder à différentes formations - il ne me manque que l'alternance !</p>
           <p>C'est donc pour ça que vous êtes là.</p>
           <p>J'ai deux solutions à vous proposer.</p>
         `,
@@ -378,7 +376,7 @@ const Simulations = {
       return Layouts.messageWithButtons({
         content: `
           <h1>Alors...</h1>
-          <p>Si vous êtes intéressé, ou que vous voulez en discuter pour <a className="app-a" href="#about">en savoir plus</a>, n'hésitez pas à <a className="app-a" href="#contact">me contacter</a>, je serais ravi d'échanger avec vous!</p>
+          <p>Si vous êtes intéressé, ou que vous voulez en discuter pour <a className="app-a" href="#about">en savoir plus</a>, n'hésitez pas à <a className="app-a" href="#contact">me contacter</a>, je serais ravi d'échanger avec vous !</p>
         `,
         btn: {
           text: 'On recommence ?',
